@@ -11,9 +11,20 @@ export const getImages = () => (dispatch) =>
         });
         ApiService.getImages()
             .then((response) => {
+
+                let filteredData = [];
+
+                response.data.hits.map((item) => {
+                    let obj = {
+                        imageURL: item.userImageURL,
+                        user: item.user,
+                        likes: item.likes
+                    }
+                    filteredData.push(obj)
+                })
                 dispatch({
                     type: keys.GET_IMAGES_FULFILLED,
-                    payload: response.data,
+                    payload: filteredData,
                 });
                 resolve(response)
             })

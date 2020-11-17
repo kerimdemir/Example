@@ -24,7 +24,6 @@ const size = {
 export default {
     type,
     size,
-    props,
     scale,
     verticalScale,
     moderateScale,

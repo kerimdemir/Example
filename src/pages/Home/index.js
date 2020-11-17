@@ -1,20 +1,34 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
+import {ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {connect} from "react-redux";
 import {
-    View,
-    Text,
-} from 'react-native';
-import styles from './styles'
+    getImages,
+} from "../../store/actions/home.actions";
+import styles from "./styles";
 
-const App = () => {
+
+const Home = ({
+                  navigation,
+                  home: {images},
+                  getImages
+              }) => {
+    useEffect(() => {
+        getImages();
+    }, []);
+
+
     return (
-        <>
-
-            <View style={styles.container}>
-                <Text>Home Page</Text>
-            </View>
-
-        </>
-    );
+        <View style={styles.container}>
+            {images &&
+            <Text>{images.length}42 </Text>
+            }
+        </View>
+    )
 };
 
-export default App;
+const mapStateToProps = ({home}) => ({home});
+
+export default connect(mapStateToProps, {
+    getImages
+})(Home);
+
