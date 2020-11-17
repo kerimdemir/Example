@@ -19,6 +19,7 @@ export default (state = initialState, action) => {
                 images: payload,
                 isLoading: false,
             };
+
         case keys.GET_IMAGES_REJECTED:
             return {
                 ...state,
@@ -26,6 +27,20 @@ export default (state = initialState, action) => {
                 isLoading: false,
             };
 
+        case keys.NEXT_IMAGE:
+            return {
+                ...state,
+                error: false,
+                image: payload,
+                isLoading: false,
+            };
+        case keys.PREV_IMAGE:
+            return {
+                ...state,
+                error: false,
+                image: payload,
+                isLoading: false,
+            };
         default:
             return state;
     }

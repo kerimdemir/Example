@@ -14,8 +14,9 @@ export const getImages = () => (dispatch) =>
 
                 let filteredData = [];
 
-                response.data.hits.map((item) => {
+                response.data.hits.map((item, index) => {
                     let obj = {
+                        id: index,
                         imageURL: item.userImageURL,
                         user: item.user,
                         likes: item.likes
@@ -26,6 +27,10 @@ export const getImages = () => (dispatch) =>
                     type: keys.GET_IMAGES_FULFILLED,
                     payload: filteredData,
                 });
+                dispatch({
+                    type: keys.NEXT_IMAGE,
+                    payload: filteredData[0]
+                });
                 resolve(response)
             })
             .catch((error) => {
@@ -35,4 +40,25 @@ export const getImages = () => (dispatch) =>
                 });
                 reject(error);
             });
+    });
+
+export const nextImage = (images, id) => (dispatch) =>
+    images.map((item) => {
+        if (item.id == id) {
+            dispatch({
+                type: keys.NEXT_IMAGE,
+                payload: images[id + 1]
+            });
+        }
+    });
+
+
+export const prevImage = (images, id) => (dispatch) =>
+    images.map((item) => {
+        if (item.id == id && id != 0) {
+            dispatch({
+                type: keys.PREV_IMAGE,
+                payload: images[id - 1]
+            });
+        }
     });

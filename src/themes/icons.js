@@ -1,4 +1,4 @@
 const Icons = {
-    arrow: require('../assets/icons/arrow.svg'),
+    arrow: require('../assets/icons/arrow.svg')
 };
 export default Icons;
