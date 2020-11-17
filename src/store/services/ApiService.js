@@ -1,6 +1,10 @@
+import {
+    getImages
+} from './api/home.api';
+
 const ApiService = () => {
     return {
-        // home
+        getImages
     };
 };
 export default ApiService();
