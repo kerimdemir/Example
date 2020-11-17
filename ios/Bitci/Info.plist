@@ -51,6 +51,18 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIAppFonts</key>
+    	<array>
+    		<string>Ionicons.ttf</string>
+    		<string>MaterialIcons.ttf</string>
+    		<string>MaterialCommunityIcons.ttf</string>
+    		<string>FontAwesome.ttf</string>
+    		<string>Feather.ttf</string>
+    		<string>SimpleLineIcons.ttf</string>
+    		<string>RopaSans-Regular.ttf</string>
+    		<string>RopaSans-Italic.ttf</string>
+
+    	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
