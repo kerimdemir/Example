@@ -1,4 +1,4 @@
-# Bitci Front End Associate Test
+# Associate Test
                                                                                                                                 
 ## Features
 - [x] Redux setup
