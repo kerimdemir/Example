@@ -27,8 +27,8 @@
 
 ## How to Use
 ```
-git clone https://github.com/kerimdemir/Bitci.git Bitci
-cd boilerplate && npm install
+git clone https://github.com/kerimdemir/associate-test associate
+cd associate && npm install
 ```
 
 
