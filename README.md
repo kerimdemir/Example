@@ -1,4 +1,4 @@
-# Associate Test
+# Example
                                                                                                                                 
 ## Features
 - [x] Redux setup
@@ -27,8 +27,8 @@
 
 ## How to Use
 ```
-git clone https://github.com/kerimdemir/associate-test associate
-cd associate && npm install
+git clone https://github.com/kerimdemir/example example
+cd example && npm install
 ```
 
 
